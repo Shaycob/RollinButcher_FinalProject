@@ -1,0 +1,74 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e525183b-9b97-42f2-9ac4-fc1e70a39083</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main_Package\main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>RollinButcher_FinalProject</Name>
+    <RootNamespace>RollinButcher_FinalProject</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="data_Package\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptor_Package\english_Loader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptor_Package\location_Decryptor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptor_Package\movie_Decryptor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptor_Package\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="display_Package\image_Display.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="display_Package\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main_Package\config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main_Package\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main_Package\main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data_Package\" />
+    <Folder Include="decryptor_Package\" />
+    <Folder Include="display_Package\" />
+    <Folder Include="main_Package\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data_Package\EncryptedGroupHintsSpring2025.json" />
+    <Content Include="data_Package\TeamsAndEncryptedMessagesForDistribution.json" />
+    <Content Include="data_Package\team_photo.jpeg" />
+    <Content Include="data_Package\UCEnglish.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
